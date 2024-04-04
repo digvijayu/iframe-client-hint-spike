@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button id="initial-api-btn">Initial Api</button>
+  <button id="second-api-btn">Second Api</button>
+
+  <script>
+    function callInitialApi() {
+      fetch("./api/init");
+    }
+    function callSecondApi() {
+      fetch("./api/second");
+    }
+
+    console.log('asdf', document.getElementById('initial-api-btn'))
+    const btn = document.getElementById('initial-api-btn')
+    console.log('btn', btn)
+    btn.addEventListener('click', callInitialApi)
+    document.getElementById('second-api-btn').addEventListener('click', callSecondApi)
+  </script>
+</body>
+
+</html>
