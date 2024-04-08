@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Accept-CH" content="Sec-CH-UA-Mobile,Sec-CH-UA-Platform,Sec-CH-UA-Bitness,Sec-CH-UA-Model" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div>I am the iframe</div>
+
+  <script>
+    async function logMovies() {
+      const response = await fetch("https://cat-fact.herokuapp.com/facts/");
+      const response2 = await fetch("./sample.json");
+      const movies = await response.json();
+      console.log(movies);
+    }
+
+    logMovies();
+  </script>
+</body>
+
+</html>
